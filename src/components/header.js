@@ -5,12 +5,12 @@ import { Text, View } from 'react-native';
 
 // Create a component
 // Make a component
-const Header = () => {
+const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>Albums!</Text>
+      <Text style={textStyle}>{props.headerText}</Text>
     </View>
   );
 };
@@ -18,6 +18,7 @@ const Header = () => {
 const styles = {
   viewStyle: {
     backgroundColor: '#F8F8F8',
+    //backgroundColor: 'red',
     justifyContent: 'center',
     alignItems: 'center',
     height: 60,
